@@ -14,9 +14,9 @@
   },
   "scripts": {
     "start": "env-cmd -f .env react-scripts start",
-    "build": "env-cmd -f .env.staging react-scripts build",
-    "test": "env-cmd -f .env.staging react-scripts test",
-    "eject": "env-cmd -f  .env.staging react-scripts eject"
+    "build": "env-cmd -f .env react-scripts build",
+    "test": "env-cmd -f .env react-scripts test",
+    "eject": "env-cmd -f  .env react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
