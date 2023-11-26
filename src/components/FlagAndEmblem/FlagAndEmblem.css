@@ -1,0 +1,27 @@
+/* FlagAndEmblem.css */
+
+.fna-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 16px;
+  border-radius: 8px; /* Add border-radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.flag-container {
+  text-align: center;
+}
+
+.flag-container img {
+  max-height: 200px;
+  border-radius: 4px; /* Add border-radius for rounded corners */
+  margin-bottom: 8px; /* Add spacing between the image and text */
+}
+
+.coa-container img {
+  max-height: 200px;
+  border-radius: 4px; /* Add border-radius for rounded corners */
+  margin-bottom: 8px; /* Add border-radius for rounded corners */
+}

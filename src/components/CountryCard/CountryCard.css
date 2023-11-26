@@ -1,0 +1,32 @@
+div {
+  overflow: visible;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 16px;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 16px;
+}
+
+.stats-container > div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1px;
+  justify-items: center;
+  align-items: center;
+}
+
+.stats-container > * {
+  width: 100%;
+  text-align: center;
+}
+
+.map-container {
+  border-color: black;
+  border-width: 2px;
+  border: 1px;
+}

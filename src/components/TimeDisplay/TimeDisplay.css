@@ -1,0 +1,16 @@
+.time-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+h2 {
+  color: black; /* Choose your desired color */
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 2em;
+  font-weight: bold;
+  color: #555; /* Choose your desired color */
+}

@@ -1,0 +1,9 @@
+@import "../../Variables.css";
+.stats-container {
+  height: auto;
+}
+.stats-container img {
+  height: 150px;
+  width: min-content;
+  display: block;
+}
