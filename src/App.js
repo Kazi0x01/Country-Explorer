@@ -1,9 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState, useEffect } from "react";
-import { setSelectionRange } from "@testing-library/user-event/dist/utils";
-import Maps from "./components/Maps/Maps";
 import CountryCard from "./components/CountryCard/CountryCard";
+import Loading from "./components/Loading/Loading";
 
 const countryList = require("./countryNames.json");
 
@@ -12,18 +11,22 @@ const App = () => {
   const [countryData, setCountryData] = useState(null);
   const [error, setError] = useState(null);
   const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [submitPressed, setSubmitPressed] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
 
   const fetchCountryData = async () => {
     try {
+      setIsLoading(true);
       const url = process.env.REACT_APP_API_URL + countryName;
+      console.log(url);
       const response = await fetch(url);
       if (!response.ok) {
         const fetchError = await response.json();
         throw new Error(fetchError.error);
       }
       const result = await response.json();
+      console.log(result);
       setCountryData(result);
 
       setCountryName("");
@@ -35,6 +38,8 @@ const App = () => {
       setCountryName("");
       setError(error.message);
       setIsError(true);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -61,9 +66,8 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* {document.} */}
       <div className="country-search-container">
-        <h1>Country Search Engine</h1>
+        <h1>Country Explorer</h1>
         <div className="search-outer-container">
           <div className="search-input-container">
             <input
@@ -102,13 +106,18 @@ const App = () => {
         </div>
       </div>
 
-      {countryData && (
+      {isLoading && (
+        <div className="loading-container">
+          <Loading />
+        </div>
+      )}
+      {countryData && !isLoading && (
         <div>
           <CountryCard props={countryData} />
         </div>
       )}
 
-      {isError && (
+      {isError && !isLoading && (
         <div>
           <h2>{error}</h2>
         </div>

@@ -125,6 +125,12 @@ input {
   background-color: #04aa6d; /* Green */
   color: white;
 }
+.loading-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+}
 
 @keyframes App-logo-spin {
   from {

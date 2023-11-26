@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Country Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This React frontend is designed to interact with the Countries API, a Node.js server providing information about countries using the REST Countries API. It allows users to query country details and embed Google Maps for specific locations.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Getting Started](#getting-started)
+- [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The React Country Information App is designed to display detailed information about various countries. It leverages React components to organize and present data, including time zone, currency details, geographical location, and more. The app also incorporates interactive maps to visualize the geographical position of the selected country.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Country Information:** View detailed information about a selected country.
+- **Time Display:** Display the current time in the selected country's time zone.
+- **Flag and Emblem:** View the flag and coat of arms of the selected country.
+- **Membership and Independence Status:** Display whether the country is a UN member and independent.
+- **Statistics Cards:** Present key statistics such as capital, continent, sub-region, population, languages, and more.
+- **Interactive Maps:** Visualize the geographical location of the selected country.
 
-### `npm run build`
+### Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js installed on your machine
+- NPM (Node Package Manager) installed
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   git clone <repository-url>
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Navigate to cloned repository on the local machine and run
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Creating .env file in root directory specifing the API-endpoints.
 
-## Learn More
+   ```bash
+   REACT_APP_API_URL="https://country-api-ez0o.onrender.com/?country="
+   REACT_APP_EMBED_API_URL="https://country-api-ez0o.onrender.com/embed-map"
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Run application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- To launch the application on local machine, navigate to root directory of project and run the following command:
+  ```bash
+  npm start
+  ```
+- Open your browser and navigate to http://localhost:3000 to view the app.
 
-### Code Splitting
+# Licence
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the ISC License.
